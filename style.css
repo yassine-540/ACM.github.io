@@ -1,0 +1,797 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    animation: MyShow_MySlide;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    z-index: 100;
+
+}
+.greeting{
+    color: white;
+    font-size: 4rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    animation: MyOpacity_MySlide;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+}
+.backward{
+    color: #FAA132;
+}
+.dots{
+    color: #E14C31;
+}
+.welcome{
+    color: #82be21;
+}
+@keyframes MyShow_MySlide{
+    0%{
+        background-color: #0A2647;
+    }
+    70%{
+        background-color: #0A2647;
+        transform: translateY(0%);
+    }
+    100%{
+        background-color: #0A2647;
+        transform: translateY(-100vh);
+    }
+    
+}
+@keyframes MyOpacity_MySlide{
+    0%{
+        opacity: 0%;
+    }
+    20%{
+        opacity: 0%;
+    }
+    30%{
+        opacity: 100%;
+    }
+    70%{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-200%);
+    }
+    
+}
+@media (max-width: 900px){
+    .greeting{
+        font-size: 1.5rem;
+    }
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    animation: NavSlide;
+    animation-duration: 1.2s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #0A2647;
+}
+.logo{
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 800;
+    margin-left: 20px;
+}   
+.logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.nav-items{
+    color: #fff;
+    font-family: 'Calibri', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.nav-items:hover{
+    color: #00A8CC;
+    border-bottom: 3px solid #00A8CC;
+    padding-bottom: 3px;
+}
+nav a.active{
+    color: #00A8CC;
+    border-bottom: 3px solid #00A8CC;
+    padding-bottom: 3px;
+}
+.nav-bar{
+    right: 0;
+    margin-right: 20px;
+}
+@keyframes NavSlide{
+    0%{
+        transform: translateY(-80px);
+    }
+    70%{
+        transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@media (max-width:600px) {
+    .nav-items{
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin: 5px;
+    }
+    
+}
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0A2647;
+}
+.home-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content{
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.home-content h1{
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.home-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.home-content p{
+    width: 40vw;
+    font-size: 1rem;
+}
+.home span{
+    color: #00A8CC;
+}
+.home h3 span::before{
+    content: "";
+    color: #00A8CC;
+    animation: words 30s infinite;
+    animation-delay: 4s;
+}
+
+.home h3 span::after{
+    content: "";
+    position: absolute;
+    height: 2rem;
+    margin-left: 6px;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #00A8CC;
+    }
+}
+
+@keyframes words{
+    0%, 1%{
+        content: "C";
+    }
+    1%, 2%{
+        content: "Co";
+    }
+    2%, 3%{
+        content: "Cod";
+    }
+    3%, 4%{
+        content: "Codi";
+    }
+    4%, 5%{
+        content: "Codin";
+    }
+    5%, 19%{
+        content: "Coding";
+    }
+    19%, 20%{
+        content: "Codin";
+    }
+    20%, 21%{
+        content: "Codi";
+    }
+    21%, 22%{
+        content: "Cod";
+    }
+    22%, 23%{
+        content: "Co";
+    }
+    23%, 24%{
+        content: "C";
+    }
+    24%, 25%{
+        content: "";
+    }
+    /*---*/
+    26%, 27%{
+        content: "W";
+    }
+    27%, 28%{
+        content: "We";
+    }
+    28%, 29%{
+        content: "Web";
+    }
+    29%, 30%{
+        content: "Web D";
+    }
+    30%, 31%{
+        content: "Web De";
+    }
+    31%, 44%{
+        content: "Web Dev";
+    }
+    44%, 45%{
+        content: "Web De";
+    }
+    45%, 46%{
+        content: "Web D";
+    }
+    46%, 47%{
+        content: "Web";
+    }
+    47%, 48%{
+        content: "We";
+    }
+    48%, 49%{
+        content: "W";
+    }
+    49%, 50%{
+        content: "";
+    }
+    /*---*/
+    51%, 52%{
+        content: "G";
+    }
+    52%, 53%{
+        content: "Ga";
+    }
+    53%, 54%{
+        content: "Gam";
+    }
+    54%, 55%{
+        content: "Game";
+    }
+    55%, 56%{
+        content: "Game D";
+    }
+    56%, 57%{
+        content: "Game De";
+    }
+    57%, 68%{
+        content: "Game Dev";
+    }
+    68%, 69%{
+        content: "Game De";
+    }
+    69%, 70%{
+        content: "Game D";
+    }
+    70%, 71%{
+        content: "Game";
+    }
+    71%, 72%{
+        content: "Gam";
+    }
+    72%, 73%{
+        content: "Ga";
+    }
+    73%, 74%{
+        content: "G";
+    }
+    74%, 75%{
+        content: "";
+    }
+    /*---*/
+    76%, 77%{
+        content: "G";
+    }
+    77%, 78%{
+        content: "Gr";
+    }
+    78%, 79%{
+        content: "Gra";
+    }
+    79%, 80%{
+        content: "Grap";
+    }
+    80%, 81%{
+        content: "Graph";
+    }
+    81%, 82%{
+        content: "Graphi";
+    }
+    82%, 83%{
+        content: "Graphic";
+    }
+    83%, 84%{
+        content: "Graphic D";
+    }
+    84%, 85%{
+        content: "Graphic De";
+    }
+    85%, 86%{
+        content: "Graphic Des";
+    }
+    86%, 87%{
+        content: "Graphic Desi";
+    }
+    87%, 88%{
+        content: "Graphic Desig";
+    }
+    88%, 89%{
+        content: "Graphic Design";
+    }
+    89%, 90%{
+        content: "Graphic Desi";
+    }
+    90%, 91%{
+        content: "Graphic De";
+    }
+    91%, 92%{
+        content: "Graphic D";
+    }
+    92%, 93%{
+        content: "Graphic";
+    }
+    93%, 94%{
+        content: "Graphi";
+    }
+    94%, 95%{
+        content: "Graph";
+    }
+    95%, 96%{
+        content: "Grap";
+    }
+    96%, 97%{
+        content: "Gra";
+    }
+    97%, 98%{
+        content: "Gr";
+    }
+    98%, 99%{
+        content: "G";
+    }
+    99%, 100%{
+        content: "";
+    }
+}
+.home-img img{
+    width: 32vw;
+    margin-left: 30px;
+}
+h2{
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+@Media (max-width:600px){
+    .home{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    .home-img{
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+    .home-img img{
+        width: 50vw;
+    }
+    .home-content{
+        display: flex;
+        flex-direction: column;
+        width: 75vw;
+        margin-bottom: 8rem;
+    }
+    .home h1{
+        font-size: 1.8rem;
+    }
+    .home h3{
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+}
+@Media (max-width:900px){
+    .home{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+    .home-img{
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+    .home-img img{
+        width: 50vw;
+    }
+    .home-content{
+        display: flex;
+        flex-direction: column;
+        width: 75vw;
+        margin-bottom: 8rem;
+    }
+    .home h1{
+        font-size: 2.5rem;
+    }
+    .home h3{
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+.About{
+    background-color: #00A8CC;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+.About, .Application, .Contact{
+    color: #fff;
+}
+a button{
+    color: #fff;
+    border:2px solid #fff;
+}
+button{
+    margin-top: 15px;
+    padding: 15px 34px;
+    border-radius: 300px;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.About button{
+    background-color: #00A8CC;
+}
+.About button:hover{
+    background-color: #fff;
+    color: #00A8CC;
+    cursor: pointer;
+}
+@media (max-width:900px){
+    .About{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75vw;
+    }
+    .description p{
+        text-align: center;
+    }
+    .description button{
+        margin-top: 15px;
+        padding: 15px 26px;
+        border-radius: 300px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .About h2{
+        font-size: 3rem;
+    }
+}
+.Application{
+    background-color: #0A2647;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.apply{
+    width: 50vw;
+}
+.Application button{
+    background-color: #0A2647;
+}
+.Application button:hover{
+    background-color: #fff;
+    color: #0A2647;
+    cursor: pointer;
+}
+@media (max-width:900px){
+    .Application{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .apply{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75vw;
+    }
+    .apply p{
+        text-align: center;
+    }
+    .apply button{
+        margin-top: 15px;
+        padding: 15px 26px;
+        border-radius: 300px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .Application h2{
+        font-size: 3rem;
+    }
+    #submit{
+        margin-top: 5px;
+        padding: 5px 15px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+.Contact{
+    background-color: #0c7b93;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.contact-method{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.mail h3, .social-media h3{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #fff; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+}
+.mail h3 span, .social-media h3 span{
+    background-color: #0c7b93; 
+    padding:0 10px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+.social-icons{
+    margin-top: 15px;
+}
+.social-icons i {
+    margin-right: 1rem;
+}
+.social-icons a{
+    display: flex;
+    flex-direction: row;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.3s ease;
+    color: #fff;
+}
+.social-icons a:hover{
+    color: #00A8CC;
+    transform: scale(1.2);
+    background-color: #fff;
+    box-shadow: 0  0 25px #00A8CC;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+form button{
+    margin-top: 10px;
+    padding: 10px 17px;
+    border-radius: 300px;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0c7b93;
+    border: 2px solid #fff;
+}
+form button:hover{
+    color: #0c7b93;
+    background-color: #fff;
+}
+@media (max-width:900px) {
+    .Contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .Contact h2{
+        font-size: 3rem;
+    }
+    .mail{
+        margin: 20px 0px
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .text p{
+        width: 75vw;
+        margin-top: 2rem;
+    }
+    .submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+p{
+    font-family: "Hind Madurai", sans-serif;;
+}
+h2{
+    font-family: 'Montserrat',sans-serif;
+}
+label, input{
+    font-family: "Khula", sans-serif;;
+}
+label{
+    font-weight: 500;
+}
+input{
+    padding: 2px 8px;
+    border-radius: 50px;
+    border: 2px solid #00A8CC;
+}
+h3{
+    font-family: 'Montserrat',sans-serif;;
+}
+.social-icons p{
+    font-weight: bold;
+}
+footer{
+    background: #0c7b93;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: lighter;
+    text-align: center;
+}
+@keyframes appear_h {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes appear_img {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.home-img img{
+    animation: appear_img;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+h1{
+    animation: appear_h ease;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+.home-content h3{
+    animation: appear_h linear;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+}
+.home-content p{
+    animation: appear_p;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+}
+.About h2, .Application h2 {
+    animation: appear_h linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes appear_p {
+    from{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes appear_btn {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.description p,.apply p{
+    animation: appear_p linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.description button, .apply button{
+    animation: appear_btn linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
